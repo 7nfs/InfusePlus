@@ -112,7 +112,7 @@ jobs:
 
       - name: Get InfusePro Version
         run: |
-          InfusePro_VERSION=$(awk '/Version:/ {print $2}' main/control)
+          InfusePro_VERSION=$(awk '/Version:/ {print $2}' main)
           echo "InfusePro_VERSION=${InfusePro_VERSION}" >> "$GITHUB_ENV"
           echo "$InfusePro_VERSION"
       - name: Prepare X iPA
