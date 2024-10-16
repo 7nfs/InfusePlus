@@ -118,7 +118,7 @@ jobs:
       - name: Prepare X iPA
         if: inputs.deploy_format == 'sideloaded' || inputs.deploy_format == 'trollstore'
         run: |
-          wget "$IPA_URL" --no-verbose -O main/packages/com.atebits.Tweetie2.ipa
+          wget "$IPA_URL" --no-verbose -O main/packages/com.firecore.infuse.ipa
           unzip -q main/packages/com.firecore.infuse -d main/tmp
           # Get the version number of the X app and store it
           X_VERSION=$(grep -A 1 '<key>CFBundleShortVersionString</key>' main/tmp/Payload/infuse.app/Info.plist |
